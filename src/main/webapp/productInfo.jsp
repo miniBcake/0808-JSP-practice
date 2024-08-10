@@ -26,13 +26,18 @@
     %>
     <!-- 1.상품 목록 출력, 상품 선택 버튼, 2.상품 검색버튼 -->
 	<form action="productController.jsp" method="POST">
-		<h2>-=[상품 정보]=-</h2>
+		<h3>-=[상품 정보]=-</h3>
 		<%
-			out.println("<input type='hidden' name='product' value='"+data.getNum()+">");
-			out.println("<div>[상품명] "+data.getName()+", [수량] "+data.getCnt()+"개, [가격] "+data.getPrice()+"원</div>");
-			out.println("<div>"+data.getDetails()+"</div>");
-			if(user != null){					
-				out.println("<br><button>물건 담기</button>");
+			if(data != null){				
+				out.println("<div class='center'>[상품명] "+data.getName()+", [수량] "+data.getCnt()+"개, [가격] "+data.getPrice()+"원</div>");
+				out.println("<div class='center'>"+data.getDetails()+"</div>");
+				if(user != null){					
+					out.println("<input type='hidden' name='product' value='"+data.getNum()+"'>");
+					out.println("<br><button>물건 담기</button>");
+				}
+			}
+			else{
+				out.println("<div>상품 정보를 불러올 수 없습니다.</div>");				
 			}
 		%>
 	</form>

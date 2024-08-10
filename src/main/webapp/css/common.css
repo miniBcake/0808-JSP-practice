@@ -84,7 +84,7 @@ main button, main input[type="submit"] {
 }
 
 ol{
-	width: 300px;
+	width: 340px;
 	margin: 20px auto;
 }
 li{
@@ -93,7 +93,11 @@ li{
 	font-size: 16px;
 }
 
-input[type="text"], select, input[type="password"]{
+.center{
+	text-align: center;
+}
+
+input[type="text"], select, input[type="password"], input[type="number"]{
 	height: 35px;;
 	width: 200px;
 	padding: 0 5px;

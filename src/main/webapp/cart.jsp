@@ -25,7 +25,7 @@
  			out.println("<li>");
 			out.println("<input type='checkbox' name='product' value='"+data.getKey().getNum()+"'>");
 			out.println("<a href='productInfoController.jsp?num="+data.getKey().getNum()+"'>[상품명] "+data.getKey().getName()
-					+", [가격] "+data.getKey().getPrice()+"원</a> [구매 수량] "+data.getValue()+"개, ");
+					+", [가격] "+data.getKey().getPrice()+"원</a> [구매 수량] "+data.getValue()+"개 ");
 			out.println("</li>");
 		}
  		out.println("<br><button>선택상품 빼기</button>");
